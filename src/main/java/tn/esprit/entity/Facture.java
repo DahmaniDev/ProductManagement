@@ -1,10 +1,17 @@
 package tn.esprit.entity;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
+import java.util.Set;
 
 import javax.persistence.*;
+import lombok.*;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 @Entity
 public class Facture implements Serializable{
 
@@ -18,7 +25,22 @@ public class Facture implements Serializable{
 	private long idFacture;
 	private float montantRemise;
 	private float montantFacture;
+	@Temporal(TemporalType.DATE)
 	private Date dateFacture;
 	private boolean active;
+	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="facture")
+	private Set<DetailFacture> detailsFacture;
+	
+	@ManyToOne
+	private Client client;
+
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
+	}
 
 }

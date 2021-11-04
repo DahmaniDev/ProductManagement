@@ -3,7 +3,13 @@ package tn.esprit.entity;
 import java.io.Serializable;
 
 import javax.persistence.*;
+import lombok.*;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 @Entity
 public class Fournisseur implements Serializable{
 

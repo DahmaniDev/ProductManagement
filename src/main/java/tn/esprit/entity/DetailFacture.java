@@ -1,8 +1,15 @@
 package tn.esprit.entity;
 
 import java.io.Serializable;
-import javax.persistence.*;
 
+import javax.persistence.*;
+import lombok.*;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 @Entity
 public class DetailFacture implements Serializable{
 
@@ -18,5 +25,10 @@ public class DetailFacture implements Serializable{
 	private float prixTotal;
 	private int pourcentageRemise;
 	private int montantRemise;
+	@ManyToOne
+	private Produit produit;
+	
+	@ManyToOne
+	private Facture facture;
 
 }

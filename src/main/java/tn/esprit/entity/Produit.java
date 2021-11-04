@@ -1,9 +1,15 @@
 package tn.esprit.entity;
 
 import java.io.Serializable;
-
+import java.util.Set;
 import javax.persistence.*;
+import lombok.*;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 @Entity
 public class Produit implements Serializable{
 
@@ -17,6 +23,17 @@ public class Produit implements Serializable{
 	private String code;
 	private String libelle;
 	private float prixUnitaire;
+	@ManyToOne
+	private Rayon rayon;
+	@ManyToOne
+	private Stock stock;
+	@OneToOne(cascade = CascadeType.ALL)
+	private DetailProduit detailProduit;
+	
+	@OneToMany(cascade=CascadeType.ALL, mappedBy="produit")
+	private Set<DetailFacture> detailFactures;
+	@ManyToMany(cascade = CascadeType.ALL)
+	private Set<Fournisseur> fournisseurs;
 	
 	
 }
