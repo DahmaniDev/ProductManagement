@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import tn.esprit.entity.Stock;
+import tn.esprit.Entity.Stock;
 
 @Service
 public interface IStockService {

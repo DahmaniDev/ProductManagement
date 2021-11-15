@@ -1,4 +1,4 @@
-package tn.esprit.service;
+package tn.esprit.Service;
 
 import static org.junit.Assert.*;
 
@@ -10,10 +10,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import lombok.extern.slf4j.Slf4j;
+import tn.esprit.Entity.Stock;
 import tn.esprit.Service.IStockService;
-import tn.esprit.entity.Stock;
 
 @RunWith(SpringRunner.class)
+@Slf4j
 @SpringBootTest
 public class StockServiceImplTest {
 
@@ -29,6 +31,7 @@ public class StockServiceImplTest {
 		s.setQteStock(10);
 		s.setQteMin(100);
 		Stock savedStock = stockService.addStock(s);
+		log.info("Stock enregistré : " +savedStock.getIdStock());
 		assertNotEquals(expected + 1, stocks.size());
 		assertNotNull(savedStock.getLibelleStock());
 		stockService.deleteStock(savedStock.getIdStock());
@@ -41,6 +44,7 @@ public class StockServiceImplTest {
 		s.setQteStock(10);
 		s.setQteMin(100);
 		Stock savedStock = stockService.addStock(s);
+		log.info("Stock à supprimer : " +savedStock);
 		Long idToBeDeleted = savedStock.getIdStock();
 		stockService.deleteStock(idToBeDeleted);
 		assertNull(stockService.retrieveStock(idToBeDeleted));

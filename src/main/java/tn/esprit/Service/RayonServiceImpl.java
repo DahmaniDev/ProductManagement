@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import tn.esprit.Entity.Rayon;
 import tn.esprit.Repository.RayonRepository;
-import tn.esprit.entity.Rayon;
 
 @Service
 public class RayonServiceImpl implements IRayonService{

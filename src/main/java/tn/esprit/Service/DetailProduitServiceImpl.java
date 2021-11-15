@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import tn.esprit.Entity.DetailProduit;
 import tn.esprit.Repository.DetailProduitRepository;
-import tn.esprit.entity.DetailProduit;
 
 @Service
 public class DetailProduitServiceImpl implements IDetailProduitService{

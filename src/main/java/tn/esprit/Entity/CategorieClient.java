@@ -1,4 +1,4 @@
-package tn.esprit.entity;
+package tn.esprit.Entity;
 
 public enum CategorieClient {
 	FIDELE, ORDINAIRE, PREMUIM;

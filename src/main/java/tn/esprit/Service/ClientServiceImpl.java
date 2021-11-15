@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import tn.esprit.Entity.Client;
 import tn.esprit.Repository.ClientRepository;
-import tn.esprit.entity.Client;
 
 @Service
 public class ClientServiceImpl implements IClientService{

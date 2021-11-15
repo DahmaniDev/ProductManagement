@@ -1,7 +1,6 @@
-package tn.esprit.entity;
+package tn.esprit.Entity;
 
 import java.io.Serializable;
-import java.util.Set;
 
 import javax.persistence.*;
 import lombok.*;
@@ -12,7 +11,7 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 @Entity
-public class Rayon implements Serializable{
+public class Fournisseur implements Serializable{
 
 	/**
 	 * 
@@ -21,10 +20,8 @@ public class Rayon implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long idRayon;
-	private String codeRayon;
-	private String libelleRayon;
-	@OneToMany(cascade=CascadeType.ALL, mappedBy="rayon")
-	private Set<Produit> produits;
-	
+	private long idFournisseur;
+	private String codeFournissuer;
+	private String libelleFournisseur;
+
 }

@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import lombok.extern.slf4j.Slf4j;
+import tn.esprit.Entity.Facture;
 import tn.esprit.Repository.FactureRepository;
-import tn.esprit.entity.Facture;
 
 @Slf4j
 @Service
@@ -33,6 +33,11 @@ public class FactureServiceImpl implements IFactureService{
 	@Override
 	public Facture retrieveFacture(Long id) {
 		return factureRepository.findById(id).orElse(null);
+	}
+
+	@Override
+	public Facture addFacture(Facture f) {
+		return factureRepository.save(f);
 	}
 
 }

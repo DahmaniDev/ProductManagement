@@ -1,4 +1,4 @@
-package tn.esprit.repository;
+package tn.esprit.Service;
 
 import static org.junit.Assert.assertNotEquals;
 
@@ -11,14 +11,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import tn.esprit.Entity.Client;
 import tn.esprit.Repository.ClientRepository;
-import tn.esprit.Service.IClientService;
-import tn.esprit.entity.Client;
+
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class ClientRepositoryTest {
-
+public class ClientServiceImplTest {
+	
 	@Autowired
 	ClientRepository clientRepository;
 	@Autowired
@@ -40,4 +40,5 @@ public class ClientRepositoryTest {
 		clientService.deleteClient(savecClient1.getIdClient());
 		clientService.deleteClient(savecClient2.getIdClient());
 	}
+
 }

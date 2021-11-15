@@ -1,8 +1,10 @@
 package tn.esprit.Service;
 
 import java.util.List;
-import tn.esprit.entity.Client;
+
 import org.springframework.stereotype.Service;
+
+import tn.esprit.Entity.Client;
 
 
 @Service

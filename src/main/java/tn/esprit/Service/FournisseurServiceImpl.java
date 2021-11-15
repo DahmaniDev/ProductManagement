@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import tn.esprit.Entity.Fournisseur;
 import tn.esprit.Repository.FournisseurRepository;
-import tn.esprit.entity.Fournisseur;
 
 @Service
 public class FournisseurServiceImpl implements IFournisseurService{

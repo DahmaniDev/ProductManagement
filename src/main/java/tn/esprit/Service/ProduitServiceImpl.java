@@ -8,14 +8,14 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import lombok.extern.slf4j.Slf4j;
+import tn.esprit.Entity.DetailProduit;
+import tn.esprit.Entity.Produit;
+import tn.esprit.Entity.Rayon;
+import tn.esprit.Entity.Stock;
 import tn.esprit.Repository.DetailProduitRepository;
 import tn.esprit.Repository.ProduitRepository;
 import tn.esprit.Repository.RayonRepository;
 import tn.esprit.Repository.StockRepository;
-import tn.esprit.entity.DetailProduit;
-import tn.esprit.entity.Produit;
-import tn.esprit.entity.Rayon;
-import tn.esprit.entity.Stock;
 
 @Slf4j
 @Service

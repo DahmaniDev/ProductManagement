@@ -2,8 +2,9 @@ package tn.esprit.Service;
 
 import java.util.List;
 
-import tn.esprit.entity.DetailProduit;
 import org.springframework.stereotype.Service;
+
+import tn.esprit.Entity.DetailProduit;
 
 
 @Service
