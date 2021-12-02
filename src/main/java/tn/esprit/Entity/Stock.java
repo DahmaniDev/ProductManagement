@@ -4,6 +4,9 @@ import java.io.Serializable;
 import java.util.Set;
 
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.*;
 
 @Getter
@@ -25,7 +28,8 @@ public class Stock implements Serializable{
 	private int qteStock;
 	private int qteMin;
 	private String libelleStock;
-	@OneToMany(cascade=CascadeType.ALL, mappedBy="rayon")
+	@OneToMany(cascade=CascadeType.ALL, mappedBy="stock")
 	@ToString.Exclude
+	@JsonIgnore
 	private Set<Produit> produits;
 }

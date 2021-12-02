@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import tn.esprit.Entity.DetailProduit;
 
 
-@Service
+
 public interface IDetailProduitService {
 
 	List<DetailProduit> retrieveAllDetails();

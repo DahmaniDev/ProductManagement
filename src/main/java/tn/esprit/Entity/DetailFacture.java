@@ -3,6 +3,9 @@ package tn.esprit.Entity;
 import java.io.Serializable;
 
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.*;
 
 @Getter
@@ -27,7 +30,6 @@ public class DetailFacture implements Serializable{
 	private int montantRemise;
 	@ManyToOne
 	private Produit produit;
-	
 	@ManyToOne
 	private Facture facture;
 

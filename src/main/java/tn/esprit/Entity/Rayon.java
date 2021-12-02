@@ -4,6 +4,9 @@ import java.io.Serializable;
 import java.util.Set;
 
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.*;
 
 @Getter
@@ -24,7 +27,9 @@ public class Rayon implements Serializable{
 	private long idRayon;
 	private String codeRayon;
 	private String libelleRayon;
+	
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="rayon")
+	@JsonIgnore
 	private Set<Produit> produits;
 	
 }

@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 import tn.esprit.Entity.DetailFacture;
 
 
-@Service
 public interface IDetailFactureService {
 
 	List<DetailFacture> retrieveAllDetails();

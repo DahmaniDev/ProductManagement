@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 import tn.esprit.Entity.Client;
 
 
-@Service
 public interface IClientService {
 	
 	List<Client> retrieveAllClients();

@@ -5,6 +5,9 @@ import java.util.Date;
 import java.util.Set;
 
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.*;
 
 @Getter
@@ -34,6 +37,7 @@ public class Client implements Serializable{
 	@Enumerated(EnumType.STRING)
 	private Profession profession;
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="client")
+	@JsonIgnore
 	private Set<Facture> factures;
 
 }

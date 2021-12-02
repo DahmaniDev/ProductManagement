@@ -5,6 +5,9 @@ import java.util.Date;
 import java.util.Set;
 
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.*;
 
 @Getter
@@ -28,6 +31,9 @@ public class Facture implements Serializable{
 	@Temporal(TemporalType.DATE)
 	private Date dateFacture;
 	private boolean active;
+	
+	
+	
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="facture")
 	private Set<DetailFacture> detailsFacture;

@@ -4,6 +4,9 @@ import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.*;
 
 @Getter
@@ -29,6 +32,7 @@ public class DetailProduit implements Serializable{
 	private CategorieProduit categorieProduit;
 	
 	@OneToOne(mappedBy="detailProduit")
+	@JsonIgnore
 	private Produit produit;
 
 	public DetailProduit(Date dateCreation, Date dateDerniereModification,

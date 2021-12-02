@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import tn.esprit.Entity.Fournisseur;
 
 
-@Service
+
 public interface IFournisseurService {
 
 	List<Fournisseur> retrieveAllFournisseurs();

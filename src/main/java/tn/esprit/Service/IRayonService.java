@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 import tn.esprit.Entity.Rayon;
 
 
-@Service
 public interface IRayonService {
 
 	List<Rayon> retrieveAllRayons();

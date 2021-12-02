@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 
 import tn.esprit.Entity.Stock;
 
-@Service
 public interface IStockService {
 
 	List<Stock> retrieveAllStocks();
